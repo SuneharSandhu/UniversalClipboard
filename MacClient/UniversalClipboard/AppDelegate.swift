@@ -76,7 +76,7 @@ extension AppDelegate {
     }
 }
 
-// MARK: - Menu Bar
+// MARK: - Popover
 extension AppDelegate: NSPopoverDelegate {
     func setupPopover() {
         popover.behavior = .transient
