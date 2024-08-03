@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Clipboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #messageBox {
+            width: 600px;
+            height: 350px;
+        }
+        #log {
+            margin-top: 20px;
+            max-width: 400px;
+            height: 150px;
+            border: 1px solid #ccc;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Universal Clipboard Web Client</h1>
+    <textarea id="messageBox" placeholder="Type your message here..."></textarea>
+    <button onclick="sendMessage()">Send</button>
+
+    <div id="log"></div>
+
+    <script>
+        const ws = new WebSocket('ws://0.tcp.ngrok.io:17895');
+
+        ws.onopen = () => {
+            logMessage('Connected to the server');
+        };
+
+        ws.onmessage = (event) => {
+            event.data.text().then(text => {
+                console.log('Message from server:', text);
+                document.getElementById('messageBox').innerText += text + '\n';
+            }).catch(error => {
+                console.error('Error reading message:', error);
+            });
+        };
+
+        ws.onclose = () => {
+            logMessage('Disconnected from the server');
+        };
+
+        function sendMessage() {
+            const messageBox = document.getElementById('messageBox');
+            const message = messageBox.value;
+            ws.send(message);
+            logMessage('Sent: ' + message);
+        }
+
+        function logMessage(message) {
+            const log = document.getElementById('log');
+            const logItem = document.createElement('div');
+            logItem.textContent = message;
+            log.appendChild(logItem);
+        }
+    </script>
+</body>
+</html>
