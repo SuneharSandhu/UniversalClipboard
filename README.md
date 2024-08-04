@@ -63,3 +63,6 @@
        ![web](https://github.com/user-attachments/assets/e8cb3a4d-a3f0-4652-9433-4abfb1218fbc)
 
  8. Now open `UniversalClipboard.xcodeproj` in XCode on your Mac and paste the same forwarding address you pasted in `index.html` in the `WebsocketManager.swift` file
+ 9. Now run the project and you should see a menu bar icon at the top like so:
+    <br />
+    
