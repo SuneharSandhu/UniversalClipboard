@@ -65,4 +65,6 @@
  8. Now open `UniversalClipboard.xcodeproj` in XCode on your Mac and paste the same forwarding address you pasted in `index.html` in the `WebsocketManager.swift` file
  9. Now run the project and you should see a menu bar icon at the top like so:
     <br />
-    
+    <img width="547" alt="Screenshot 2024-08-03 at 7 19 25 PM" src="https://github.com/user-attachments/assets/20b731b9-9261-47e5-b63e-56bc1c2d7ea8">
+
+    **Note:** If you see a slash, it means it either failed to connect to the websocket or the server isnt running.
