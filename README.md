@@ -58,9 +58,13 @@
     http-server -p 8889 // you can use any port number here
     ```
  7. Open up a browser and type in localhost:8889
-    - You should see client connected print out in the server.js terminal
+    - You should see 'Client connected' printed out in the server.js terminal
        <br />
        ![web](https://github.com/user-attachments/assets/e8cb3a4d-a3f0-4652-9433-4abfb1218fbc)
+    - Webpage UI
+      <br />
+      ![html](https://github.com/user-attachments/assets/ef13c591-10c7-4f8b-963c-f78c71e2da76)
+
 
  8. Now open `UniversalClipboard.xcodeproj` in XCode on your Mac and paste the same forwarding address you pasted in `index.html` in the `WebsocketManager.swift` file
  9. Now run the project and you should see a menu bar icon at the top like so:
