@@ -64,7 +64,8 @@
     - Webpage UI
       <br />
       ![html](https://github.com/user-attachments/assets/ef13c591-10c7-4f8b-963c-f78c71e2da76)
-
+ #### WebClient and Server are now fully setup ✅
+ <br />
 
  8. Now open `UniversalClipboard.xcodeproj` in XCode on your Mac and paste the same forwarding address you pasted in `index.html` in the `WebsocketManager.swift` file
  9. Now run the project and you should see a menu bar icon at the top like so:
