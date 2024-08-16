@@ -7,7 +7,7 @@
   <h3 align="center">UniversalClipboard</h3>
 
   <p align="center">
-    A lightweight app to copy text from a windows machine and be able to <br /> immediately paste on all apple devices and vice versa!
+    A lightweight app to copy text from a windows machine and <br /> immediately be able to paste on all apple devices and vice versa!
     <br />
     <br />
     <br />
